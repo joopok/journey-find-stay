@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Users, Star, MapPin, Gamepad2, SwimmingPool, Car } from 'lucide-react';
+import { Users, Star, MapPin, Gamepad2, Waves, Car } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ThemeFamily = () => {

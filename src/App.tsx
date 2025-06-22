@@ -11,6 +11,12 @@ import Restaurants from "./pages/Restaurants";
 import Reviews from "./pages/Reviews";
 import Coupons from "./pages/Coupons";
 import NotFound from "./pages/NotFound";
+import ThemeCouple from "./pages/ThemeCouple";
+import ThemeFamily from "./pages/ThemeFamily";
+import ThemePet from "./pages/ThemePet";
+import ThemeLuxury from "./pages/ThemeLuxury";
+import ThemeCity from "./pages/ThemeCity";
+import ThemeCamping from "./pages/ThemeCamping";
 
 const queryClient = new QueryClient();
 
