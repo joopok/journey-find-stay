@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Heart, Star, MapPin, TreePine, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { handleReservation } from '@/utils/reservationUtils';
 
 const ThemePet = () => {
   const accommodations = [
@@ -99,7 +99,10 @@ const ThemePet = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600"
+                    onClick={() => handleReservation(accommodation.name, accommodation.price)}
+                  >
                     예약하기
                   </Button>
                 </div>

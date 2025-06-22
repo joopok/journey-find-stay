@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Star, MapPin, Wifi, Car, Coffee, Heart, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { handleReservation } from '@/utils/reservationUtils';
 
 const AccommodationDetail = () => {
   const { id } = useParams();
@@ -144,7 +144,10 @@ const AccommodationDetail = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white mb-4">
+                <Button 
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white mb-4"
+                  onClick={() => handleReservation("럭셔리 오션 리조트", "₩180,000")}
+                >
                   예약하기
                 </Button>
 

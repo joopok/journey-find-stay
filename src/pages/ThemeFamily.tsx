@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Users, Star, MapPin, Gamepad2, Waves, Car } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { handleReservation } from '@/utils/reservationUtils';
 
 const ThemeFamily = () => {
   const accommodations = [
@@ -98,7 +99,10 @@ const ThemeFamily = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
+                    onClick={() => handleReservation(accommodation.name, accommodation.price)}
+                  >
                     예약하기
                   </Button>
                 </div>
