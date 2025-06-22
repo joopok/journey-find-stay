@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Star, MapPin, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -123,9 +123,11 @@ const FeaturedStays = () => {
                   ))}
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                  상세보기
-                </Button>
+                <Link to={`/accommodation/${stay.id}`}>
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                    상세보기
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

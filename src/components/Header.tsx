@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Menu, User, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -14,22 +15,22 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">여</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               여행허브
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</a>
+            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</Link>
+            <Link to="/activities" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</Link>
+            <Link to="/restaurants" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</Link>
+            <Link to="/reviews" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</Link>
+            <Link to="/coupons" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</Link>
           </nav>
 
           {/* Right Section */}
@@ -69,11 +70,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in">
             <nav className="flex flex-col space-y-3">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</a>
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</Link>
+              <Link to="/activities" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</Link>
+              <Link to="/restaurants" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</Link>
+              <Link to="/reviews" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</Link>
+              <Link to="/coupons" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</Link>
               <Button variant="ghost" size="sm" className="flex items-center space-x-2 w-fit">
                 <User className="w-4 h-4" />
                 <span>로그인</span>
