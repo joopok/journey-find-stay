@@ -13,7 +13,7 @@ const HeroSection = () => {
   });
 
   const handleSearch = () => {
-    console.log('Searching with:', searchData);
+    console.log('검색 데이터:', searchData);
   };
 
   return (
@@ -30,10 +30,10 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Explore Jeju This Summer
+            제주도 여름 여행을 떠나세요
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in">
-            Up to 40% Off on Premium Accommodations
+            프리미엄 숙박시설 최대 40% 할인
           </p>
 
           {/* Search Widget */}
@@ -42,7 +42,7 @@ const HeroSection = () => {
               <div className="relative">
                 <MapPin className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
                 <Input
-                  placeholder="Where to?"
+                  placeholder="어디로 떠나세요?"
                   className="pl-10 h-12 border-gray-200 focus:border-blue-500"
                   value={searchData.destination}
                   onChange={(e) => setSearchData({...searchData, destination: e.target.value})}
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <Calendar className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
                 <Input
                   type="date"
-                  placeholder="Check-in"
+                  placeholder="체크인"
                   className="pl-10 h-12 border-gray-200 focus:border-blue-500"
                   value={searchData.checkIn}
                   onChange={(e) => setSearchData({...searchData, checkIn: e.target.value})}
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 <Calendar className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
                 <Input
                   type="date"
-                  placeholder="Check-out"
+                  placeholder="체크아웃"
                   className="pl-10 h-12 border-gray-200 focus:border-blue-500"
                   value={searchData.checkOut}
                   onChange={(e) => setSearchData({...searchData, checkOut: e.target.value})}
@@ -75,11 +75,11 @@ const HeroSection = () => {
                   value={searchData.guests}
                   onChange={(e) => setSearchData({...searchData, guests: e.target.value})}
                 >
-                  <option value="1">1 Guest</option>
-                  <option value="2">2 Guests</option>
-                  <option value="3">3 Guests</option>
-                  <option value="4">4 Guests</option>
-                  <option value="5+">5+ Guests</option>
+                  <option value="1">1명</option>
+                  <option value="2">2명</option>
+                  <option value="3">3명</option>
+                  <option value="4">4명</option>
+                  <option value="5+">5명 이상</option>
                 </select>
               </div>
             </div>
@@ -88,7 +88,7 @@ const HeroSection = () => {
               className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
             >
               <Search className="w-5 h-5" />
-              <span>Search Amazing Stays</span>
+              <span>멋진 숙소 찾기</span>
             </Button>
           </div>
         </div>

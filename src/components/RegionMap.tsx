@@ -6,12 +6,12 @@ const RegionMap = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
 
   const regions = [
-    { id: 1, name: "Seoul", stays: 1250, trending: true, x: "45%", y: "35%" },
-    { id: 2, name: "Busan", stays: 680, trending: false, x: "75%", y: "80%" },
-    { id: 3, name: "Jeju", stays: 420, trending: true, x: "40%", y: "95%" },
-    { id: 4, name: "Gangwon", stays: 340, trending: false, x: "65%", y: "25%" },
-    { id: 5, name: "Gyeongju", stays: 280, trending: true, x: "70%", y: "60%" },
-    { id: 6, name: "Incheon", stays: 190, trending: false, x: "35%", y: "40%" }
+    { id: 1, name: "서울", stays: 1250, trending: true, x: "45%", y: "35%" },
+    { id: 2, name: "부산", stays: 680, trending: false, x: "75%", y: "80%" },
+    { id: 3, name: "제주", stays: 420, trending: true, x: "40%", y: "95%" },
+    { id: 4, name: "강원", stays: 340, trending: false, x: "65%", y: "25%" },
+    { id: 5, name: "경주", stays: 280, trending: true, x: "70%", y: "60%" },
+    { id: 6, name: "인천", stays: 190, trending: false, x: "35%", y: "40%" }
   ];
 
   return (
@@ -19,10 +19,10 @@ const RegionMap = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Discover Korea
+            대한민국 여행지
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Click on any region to explore amazing accommodations and local experiences
+            지역을 클릭하여 멋진 숙박시설과 현지 경험을 탐색해보세요
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const RegionMap = () => {
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                       <div className="bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap">
                         <div className="font-semibold">{region.name}</div>
-                        <div className="text-gray-300">{region.stays} stays</div>
+                        <div className="text-gray-300">{region.stays}개 숙소</div>
                         <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
                       </div>
                     </div>
@@ -86,10 +86,10 @@ const RegionMap = () => {
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-gray-900">{region.name}</h3>
                     {region.trending && (
-                      <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">Hot</span>
+                      <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">인기</span>
                     )}
                   </div>
-                  <p className="text-sm text-gray-600">{region.stays} stays</p>
+                  <p className="text-sm text-gray-600">{region.stays}개 숙소</p>
                 </div>
               ))}
             </div>
@@ -97,13 +97,13 @@ const RegionMap = () => {
             {/* Selected Region Details */}
             {selectedRegion && (
               <div className="mt-6 p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white animate-fade-in">
-                <h3 className="text-xl font-bold mb-2">Explore {selectedRegion.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{selectedRegion.name} 탐색하기</h3>
                 <p className="mb-4">
-                  Discover {selectedRegion.stays} amazing accommodations in {selectedRegion.name}. 
-                  From luxury hotels to cozy guesthouses, find your perfect stay.
+                  {selectedRegion.name}에서 {selectedRegion.stays}개의 멋진 숙박시설을 만나보세요. 
+                  럭셔리 호텔부터 아늑한 게스트하우스까지, 완벽한 숙소를 찾아보세요.
                 </p>
                 <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  View All in {selectedRegion.name}
+                  {selectedRegion.name} 모든 숙소 보기
                 </button>
               </div>
             )}

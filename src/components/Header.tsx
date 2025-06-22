@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('EN');
+  const [language, setLanguage] = useState('KR');
 
-  const languages = ['EN', 'KR', 'JP', 'CN'];
+  const languages = ['KR', 'EN', 'JP', 'CN'];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -16,20 +16,20 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">T</span>
+              <span className="text-white font-bold text-sm">여</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              TravelHub
+              여행허브
             </span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Accommodations</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Activities</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Restaurants</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reviews</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Coupons</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</a>
+            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</a>
           </nav>
 
           {/* Right Section */}
@@ -50,7 +50,7 @@ const Header = () => {
             {/* Login/Signup */}
             <Button variant="ghost" size="sm" className="hidden md:flex items-center space-x-2">
               <User className="w-4 h-4" />
-              <span>Login</span>
+              <span>로그인</span>
             </Button>
 
             {/* Mobile Menu */}
@@ -69,14 +69,14 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in">
             <nav className="flex flex-col space-y-3">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Accommodations</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Activities</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Restaurants</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Reviews</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Coupons</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">숙박</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">액티비티</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">맛집</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">리뷰</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">쿠폰</a>
               <Button variant="ghost" size="sm" className="flex items-center space-x-2 w-fit">
                 <User className="w-4 h-4" />
-                <span>Login</span>
+                <span>로그인</span>
               </Button>
             </nav>
           </div>

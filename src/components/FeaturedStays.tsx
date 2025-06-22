@@ -7,47 +7,47 @@ const FeaturedStays = () => {
   const stays = [
     {
       id: 1,
-      name: "Luxury Ocean Resort",
-      location: "Jeju Island",
+      name: "럭셔리 오션 리조트",
+      location: "제주도",
       price: "₩180,000",
       rating: 4.9,
       reviews: 234,
       image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop",
-      tags: ["🔥 Last-minute deals", "⭐ Verified"],
-      type: "Resort"
+      tags: ["🔥 막바지 특가", "⭐ 인증완료"],
+      type: "리조트"
     },
     {
       id: 2,
-      name: "Cozy Mountain Pension",
-      location: "Gangwon-do",
+      name: "아늑한 산속 펜션",
+      location: "강원도",
       price: "₩95,000",
       rating: 4.7,
       reviews: 156,
       image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
-      tags: ["🏔️ Mountain View", "🔥 Trending"],
-      type: "Pension"
+      tags: ["🏔️ 산전망", "🔥 인기급상승"],
+      type: "펜션"
     },
     {
       id: 3,
-      name: "Modern City Hotel",
-      location: "Seoul, Gangnam",
+      name: "모던 시티 호텔",
+      location: "서울 강남",
       price: "₩220,000",
       rating: 4.8,
       reviews: 892,
       image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=300&fit=crop",
-      tags: ["🏙️ City Center", "⭐ Editor's Pick"],
-      type: "Hotel"
+      tags: ["🏙️ 도심 중심가", "⭐ 에디터 추천"],
+      type: "호텔"
     },
     {
       id: 4,
-      name: "Seaside Camping Ground",
-      location: "Busan",
+      name: "바닷가 캠핑장",
+      location: "부산",
       price: "₩45,000",
       rating: 4.5,
       reviews: 89,
       image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=400&h=300&fit=crop",
-      tags: ["🏕️ Pet-Friendly", "🌊 Beach Access"],
-      type: "Camping"
+      tags: ["🏕️ 펫프렌들리", "🌊 해변 바로앞"],
+      type: "캠핑"
     }
   ];
 
@@ -56,20 +56,20 @@ const FeaturedStays = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured Stays
+            추천 숙소
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover handpicked accommodations that offer exceptional experiences
+            특별한 경험을 선사하는 엄선된 숙박시설을 만나보세요
           </p>
         </div>
 
         {/* Filter Tabs */}
         <div className="flex justify-center mb-8">
           <div className="flex space-x-2 bg-white rounded-lg p-1 shadow-sm">
-            <Button variant="default" size="sm" className="rounded-md">Trending</Button>
-            <Button variant="ghost" size="sm" className="rounded-md">New</Button>
-            <Button variant="ghost" size="sm" className="rounded-md">Editor's Pick</Button>
-            <Button variant="ghost" size="sm" className="rounded-md">All</Button>
+            <Button variant="default" size="sm" className="rounded-md">인기</Button>
+            <Button variant="ghost" size="sm" className="rounded-md">신규</Button>
+            <Button variant="ghost" size="sm" className="rounded-md">에디터 추천</Button>
+            <Button variant="ghost" size="sm" className="rounded-md">전체</Button>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ const FeaturedStays = () => {
                   </div>
                   <div className="text-right">
                     <div className="text-lg font-bold text-blue-600">{stay.price}</div>
-                    <div className="text-sm text-gray-500">per night</div>
+                    <div className="text-sm text-gray-500">1박 기준</div>
                   </div>
                 </div>
 
@@ -124,7 +124,7 @@ const FeaturedStays = () => {
                 </div>
 
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                  View Details
+                  상세보기
                 </Button>
               </div>
             </div>
@@ -133,7 +133,7 @@ const FeaturedStays = () => {
 
         <div className="text-center mt-8">
           <Button variant="outline" size="lg" className="px-8">
-            View All Accommodations
+            모든 숙박시설 보기
           </Button>
         </div>
       </div>

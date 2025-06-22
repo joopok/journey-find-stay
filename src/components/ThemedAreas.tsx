@@ -6,57 +6,57 @@ const ThemedAreas = () => {
   const themes = [
     {
       id: 1,
-      title: "Couple Trips",
+      title: "커플 여행",
       icon: Heart,
-      description: "Romantic getaways for two",
+      description: "로맨틱한 둘만의 시간",
       image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=200&fit=crop",
       color: "from-pink-500 to-red-500",
-      count: "120+ places"
+      count: "120+ 곳"
     },
     {
       id: 2,
-      title: "Family Vacations",
+      title: "가족 여행",
       icon: Users,
-      description: "Fun for the whole family",
+      description: "온 가족이 함께하는 즐거움",
       image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=300&h=200&fit=crop",
       color: "from-blue-500 to-cyan-500",
-      count: "200+ places"
+      count: "200+ 곳"
     },
     {
       id: 3,
-      title: "Pet-Friendly",
+      title: "반려동물",
       icon: Zap,
-      description: "Bring your furry friends",
+      description: "펫과 함께하는 여행",
       image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=200&fit=crop",
       color: "from-green-500 to-emerald-500",
-      count: "80+ places"
+      count: "80+ 곳"
     },
     {
       id: 4,
-      title: "Luxury Resorts",
+      title: "럭셔리 리조트",
       icon: Crown,
-      description: "Premium comfort & service",
+      description: "프리미엄 편안함과 서비스",
       image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=300&h=200&fit=crop",
       color: "from-purple-500 to-indigo-500",
-      count: "50+ places"
+      count: "50+ 곳"
     },
     {
       id: 5,
-      title: "City Escapes",
+      title: "도심 여행",
       icon: MapPin,
-      description: "Urban adventures await",
+      description: "도시의 매력 속으로",
       image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=300&h=200&fit=crop",
       color: "from-orange-500 to-yellow-500",
-      count: "150+ places"
+      count: "150+ 곳"
     },
     {
       id: 6,
-      title: "Camping Spots",
+      title: "캠핑장",
       icon: Tent,
-      description: "Connect with nature",
+      description: "자연과 하나되는 시간",
       image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=300&h=200&fit=crop",
       color: "from-teal-500 to-green-600",
-      count: "90+ places"
+      count: "90+ 곳"
     }
   ];
 
@@ -65,10 +65,10 @@ const ThemedAreas = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Explore by Theme
+            테마별 여행
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Find the perfect stay that matches your travel style and preferences
+            당신의 여행 스타일에 맞는 완벽한 숙소를 찾아보세요
           </p>
         </div>
 
