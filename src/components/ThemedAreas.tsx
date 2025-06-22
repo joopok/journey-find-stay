@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Users, Zap, Crown, MapPin, Tent } from 'lucide-react';
 
 const ThemedAreas = () => {
@@ -11,7 +12,8 @@ const ThemedAreas = () => {
       description: "로맨틱한 둘만의 시간",
       image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=200&fit=crop",
       color: "from-pink-500 to-red-500",
-      count: "120+ 곳"
+      count: "120+ 곳",
+      link: "/theme/couple"
     },
     {
       id: 2,
@@ -20,7 +22,8 @@ const ThemedAreas = () => {
       description: "온 가족이 함께하는 즐거움",
       image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=300&h=200&fit=crop",
       color: "from-blue-500 to-cyan-500",
-      count: "200+ 곳"
+      count: "200+ 곳",
+      link: "/theme/family"
     },
     {
       id: 3,
@@ -29,7 +32,8 @@ const ThemedAreas = () => {
       description: "펫과 함께하는 여행",
       image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=200&fit=crop",
       color: "from-green-500 to-emerald-500",
-      count: "80+ 곳"
+      count: "80+ 곳",
+      link: "/theme/pet"
     },
     {
       id: 4,
@@ -38,7 +42,8 @@ const ThemedAreas = () => {
       description: "프리미엄 편안함과 서비스",
       image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=300&h=200&fit=crop",
       color: "from-purple-500 to-indigo-500",
-      count: "50+ 곳"
+      count: "50+ 곳",
+      link: "/theme/luxury"
     },
     {
       id: 5,
@@ -47,7 +52,8 @@ const ThemedAreas = () => {
       description: "도시의 매력 속으로",
       image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=300&h=200&fit=crop",
       color: "from-orange-500 to-yellow-500",
-      count: "150+ 곳"
+      count: "150+ 곳",
+      link: "/theme/city"
     },
     {
       id: 6,
@@ -56,7 +62,8 @@ const ThemedAreas = () => {
       description: "자연과 하나되는 시간",
       image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=300&h=200&fit=crop",
       color: "from-teal-500 to-green-600",
-      count: "90+ 곳"
+      count: "90+ 곳",
+      link: "/theme/camping"
     }
   ];
 
@@ -76,9 +83,10 @@ const ThemedAreas = () => {
           {themes.map((theme) => {
             const IconComponent = theme.icon;
             return (
-              <div
+              <Link
                 key={theme.id}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer hover-scale transition-all duration-300"
+                to={theme.link}
+                className="group relative overflow-hidden rounded-2xl cursor-pointer hover-scale transition-all duration-300 block"
               >
                 {/* Background Image */}
                 <div className="relative h-64">
@@ -108,7 +116,7 @@ const ThemedAreas = () => {
 
                 {/* Hover Effect Border */}
                 <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
-              </div>
+              </Link>
             );
           })}
         </div>
